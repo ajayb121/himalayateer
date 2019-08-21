@@ -1,24 +1,26 @@
 {
-  "name": "nodekb",
+  "name": "mern",
   "version": "1.0.0",
-  "description": "Simple knowledgebase app",
-  "main": "app.js",
+  "description": "Teer Website",
+  "main": "server.js",
   "scripts": {
-    "start": "node app"
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Brad Traversy",
-  "license": "ISC",
+  "author": "Ajay Brahma",
+  "license": "MIT",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.17.2",
-    "connect-flash": "^0.1.1",
-    "express": "^4.15.3",
-    "express-messages": "^1.0.1",
-    "express-session": "^1.15.3",
-    "express-validator": "^3.2.0",
-    "mongoose": "^4.10.2",
-    "passport": "^0.3.2",
-    "passport-local": "^1.0.0",
-    "pug": "^2.0.0-rc.1"
+    "body-parser": "^1.19.0",
+    "concurrently": "^4.1.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.10",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }
