@@ -8,6 +8,8 @@ const app = express();
 app.use(express.json());
 
 const items = require('./routes/api/items');
+const login = require('./routes/api/login');
+const results = require('./routes/api/results');
 
 const db = require('./config/keys').mongoURI;
 
@@ -18,6 +20,8 @@ mongoose
 
 // Use Routes
 app.use('/api/items', items);
+app.use('/api/login', login);
+app.use('/api/results', results);
 
 app.use(express.static('build'));
 
