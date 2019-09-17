@@ -8,6 +8,7 @@ const app = express();
 app.use(express.json());
 
 const items = require('./routes/api/items');
+const teerResults = require('./routes/api/teerResults');
 const login = require('./routes/api/login');
 const results = require('./routes/api/results');
 
@@ -22,6 +23,7 @@ mongoose
 app.use('/api/items', items);
 app.use('/api/login', login);
 app.use('/api/results', results);
+app.use('/api/teerResults', teerResults);
 
 app.use(express.static('build'));
 
